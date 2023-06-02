@@ -1,7 +1,9 @@
 const app = require("./app");
 const dbConnection = require("./configs/db.js");
 
-app.listen(8080, async (req, res) => {
+const port = process.env.PORT || 3030;
+
+app.listen(port, async (req, res) => {
   await dbConnection();
-  console.log(`server running on port 8080`);
+  console.log(`server running on port ${port}`);
 });
