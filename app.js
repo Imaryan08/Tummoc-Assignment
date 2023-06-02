@@ -1,11 +1,14 @@
 const express = require("express");
 const ejs = express("ejs");
 const passport = require("passport");
-const { initializingPassport, isAuthenticated } = require("./configs/passport");
+const {
+  initializingPassport,
+  isAuthenticated,
+} = require("./src/configs/passport");
 const expressSession = require("express-session");
 
-const User = require("./models/user.model");
-const userController = require("./controllers/user.controller");
+const User = require("./src/models/user.model");
+const userController = require("./src/controllers/user.controller");
 
 const app = express();
 
